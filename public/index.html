@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="<%= htmlWebpackPlugin.options.app2RemoteEntry %>"></script>
+    <script src="http://localhost:3000/store/dist/remoteEntry.js"></script>
+    <meta charset="UTF-8" />
+    <!-- 绝对路径引入图标文件 -->
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      #root {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 容器节点 -->
+    <div id="root"></div>
+  </body>
+</html>
