@@ -5,6 +5,7 @@ import React, { Suspense } from 'react'
 import KeepAlive from 'react-activation'
 import { Navigate, RouteObject, useRoutes } from 'react-router-dom'
 import { metaRoutersProps } from './interface'
+import Demo from '@/pages/demo/demo'
 
 // * 导入所有router
 const metaRouters = require.context('./modules/', true, /\.tsx$/)
@@ -29,6 +30,10 @@ export const rootRouter: metaRoutersProps[] = [
       title: '登录',
       key: 'login',
     },
+  },
+  {
+    path:'/demo',
+    element:<Demo></Demo>
   },
   ...routerArray,
   {
